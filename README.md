@@ -20,44 +20,27 @@ Comprehensive lab covers all configuration topics on the CCNA exam. This lab cov
 <p align="center">
  
 [Download Cisco Packet Tracer](https://skillsforall.com/resources/lab-downloads?courseLang=en-US)<br />
+[Download .pka Lab File](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/CCNA%20Mega%20Lab%20(Jeremy_s%20IT%20Lab).pka)<br />
+[Download .xlsx Lab File](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Connections%20%26%20IPv4%20Addresses.xlsx)<br />
 
 <br />
 <br />
-Drag and frop devices as seen in the diagram. Connect devices with appropriate cabling. Run command 'show cdp neighbors' to label interfaces. Label devices with hostnames: <br/>
-<img src="https://i.imgur.com/6raWWEw.png" height="80%" width="80%" />
-<br />
-<br />
-Router basic/security, SSH and line configurations. Verfiy and save result on R1. Repeat process on all routers: <br/>
-Router>en <br/>
-Router#conf t <br/>
-Router(config)#hostname R1 <br/>
-R1(config)#security passwords min-length 5 <br/>
-R1(config)#service password-encryption <br/>
-R1(config)#login block-for 60 attempts 3 within 30 <br/>
-R1(config)#enable secret PASSWORD <br/>
-R1(config)#no ip domain-lookup <br/>
-R1(config)#banner motd b <br/>
-Enter: HELLO b <br/>
-R1(config)#username jwczerwinski privilege 15 secret PASSWORD <br/>
-R1(config)# ip domain-name corpdomain.com <br/>
-R1(config)# crypto key generate rsa <br/>
-Enter: 1024 <br/>
-R1(config)# ip ssh version 2 <br/>
-R1(config)#line console 0 <br/>
-R1(config-line)#password PASSWORD <br/>
-R1(config-line)#login <br/>
-R1(config-line)#logging synchronous <br/>
-R1(config-line)#exec-timeout 15 0 <br/>
-R1(config)#line vty 0 4 <br/>
-R1(config-line)#password PASSWORD <br/>
-R1(config-line)# login local <br/>
-R1(config-line)#logging synchronous <br/>
-R1(config-line)#exec-timeout 15 0 <br/>
-R1(config-line)# transport input ssh <br/>
-R1(config)#do show running-config <br/>
-R1#wr <br/>
-<img src="https://i.imgur.com/oJ3FATv.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/f9lgi5f.png" height="80%" width="80%" />
-<img src="https://i.imgur.com/7gwO5tg.png" height="80%" width="80%" />
+<h1>Part 1 - Initial Setup</h1>
+1. Configure the appropriate hostname on each router/switch. <br/>
+2. Configure the enable secret jeremysitlab on each router/switch. Use type 9 hashing if available; otherwise, use type 5. <br/>
+3. Configure the user account cisco with secret ccna on each router/switch. Use type 9 hashing if available; otherwise, use type 5. <br/>
+4. Configure the console line to require login with a local user account. Set a 30-minute inactivity timeout. Enable synchronous logging. <br/><br />
+- Copy and paste commands from configuration files:<br />
+
+[Part 1 - Initial Setup](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
+
+- Verify Results:<br />
+R1<br />
+<img src="https://i.imgur.com/grtBVBQ.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
+
+CSW1<br />
+<img src="https://i.imgur.com/0TxvQR4.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
 <br />
 <br />
