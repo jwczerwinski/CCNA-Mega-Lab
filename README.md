@@ -22,24 +22,36 @@ Comprehensive lab covers all configuration topics on the CCNA exam. This lab cov
 [Download Cisco Packet Tracer](https://skillsforall.com/resources/lab-downloads?courseLang=en-US)<br />
 [Download .pka Lab File](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/CCNA%20Mega%20Lab%20(Jeremy_s%20IT%20Lab).pka)<br />
 [Download .xlsx Lab File](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Connections%20%26%20IPv4%20Addresses.xlsx)<br />
+<br />
+<br />
 
-<br />
-<br />
+
 <h1>Part 1 - Initial Setup</h1>
-Adjust commands in configuration for each router/swtich, then copy and paste commands from configuration file into command line of device:<br />
+<img src="https://i.imgur.com/MvVbDhm.png" height="80%" width="80%" /> <br />
+Adjust hostnames in configuration for each router/swtich based on the layer in the network topology (edge, core, distrbution, access), then copy and paste commands from configuration file into command line of device:<br />
 
 [Part 1 - Initial Setup](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
-1. Configure the appropriate hostname on each router/switch. <br/>
-2. Configure the enable secret jeremysitlab on each router/switch. Use type 9 hashing if available; otherwise, use type 5. <br/>
-3. Configure the user account cisco with secret ccna on each router/switch. Use type 9 hashing if available; otherwise, use type 5. <br/>
-4. Configure the console line to require login with a local user account. Set a 30-minute inactivity timeout. Enable synchronous logging. <br/><br />
-
-
 Verify Results:<br />
 R1<br />
 <img src="https://i.imgur.com/grtBVBQ.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
+CSW1<br />
+<img src="https://i.imgur.com/0TxvQR4.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
+<br />
+<br />
 
+
+<h1>Part 2 - VLANs, Layer-2 EtherChannel</h1>
+<img src="https://i.imgur.com/gMdZAzs.png" height="80%" width="80%" /> <br />
+Use command 'show cdp neighbors' to identify interfaces between devices.<br />
+Copy and paste commands from configuration file into command line of device:<br />
+
+[Part 2 - VLANs, Layer-2 EtherChannel](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
+Verify Results:<br />
+R1<br />
+<img src="https://i.imgur.com/grtBVBQ.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
 CSW1<br />
 <img src="https://i.imgur.com/0TxvQR4.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
