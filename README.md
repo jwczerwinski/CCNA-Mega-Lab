@@ -49,11 +49,3 @@ Copy and paste commands from configuration file into command line of device:<br 
 
 [Part 2 - VLANs, Layer-2 EtherChannel](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
 Verify Results:<br />
-R1<br />
-<img src="https://i.imgur.com/grtBVBQ.png" height="80%" width="80%" /> <br />
-<img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
-CSW1<br />
-<img src="https://i.imgur.com/0TxvQR4.png" height="80%" width="80%" /> <br />
-<img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
-<br />
-<br />
