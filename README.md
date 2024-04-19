@@ -26,15 +26,16 @@ Comprehensive lab covers all configuration topics on the CCNA exam. This lab cov
 <br />
 <br />
 <h1>Part 1 - Initial Setup</h1>
+Copy and paste commands from configuration file:<br />
+
+[Part 1 - Initial Setup](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
 1. Configure the appropriate hostname on each router/switch. <br/>
 2. Configure the enable secret jeremysitlab on each router/switch. Use type 9 hashing if available; otherwise, use type 5. <br/>
 3. Configure the user account cisco with secret ccna on each router/switch. Use type 9 hashing if available; otherwise, use type 5. <br/>
 4. Configure the console line to require login with a local user account. Set a 30-minute inactivity timeout. Enable synchronous logging. <br/><br />
-- Copy and paste commands from configuration files:<br />
 
-[Part 1 - Initial Setup](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
 
-- Verify Results:<br />
+Verify Results:<br />
 R1<br />
 <img src="https://i.imgur.com/grtBVBQ.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
