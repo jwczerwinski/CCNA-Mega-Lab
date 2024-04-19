@@ -26,7 +26,7 @@ Comprehensive lab covers all configuration topics on the CCNA exam. This lab cov
 <br />
 <br />
 <h1>Part 1 - Initial Setup</h1>
-Copy and paste commands from configuration file:<br />
+Adjust commands in configuration for each router/swtich, then copy and paste commands from configuration file into command line of device:<br />
 
 [Part 1 - Initial Setup](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
 1. Configure the appropriate hostname on each router/switch. <br/>
