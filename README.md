@@ -28,14 +28,14 @@ Comprehensive lab covers all configuration topics on the CCNA exam. This lab cov
 
 <h1>Part 1 - Initial Setup</h1>
 <img src="https://i.imgur.com/MvVbDhm.png" height="80%" width="80%" /> <br />
-Adjust hostnames in configuration for each router/swtich based on the layer in the network topology (edge, core, distrbution, access), then copy and paste commands from configuration file into command line of device:<br />
+Adjust hostnames in configuration file for each router/swtich based on the layer in the network topology (edge, core, distrbution, access), then copy and paste commands from configuration file into command line of device:<br />
 
 [Part 1 - Initial Setup](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
 Verify Results:<br />
-R1<br />
 <img src="https://i.imgur.com/grtBVBQ.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
-CSW1<br />
+<br />
+<br />
 <img src="https://i.imgur.com/0TxvQR4.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/AAyQwxI.png" height="80%" width="80%" /> <br />
 <br />
@@ -44,8 +44,22 @@ CSW1<br />
 
 <h1>Part 2 - VLANs, Layer-2 EtherChannel</h1>
 <img src="https://i.imgur.com/gMdZAzs.png" height="80%" width="80%" /> <br />
-Use command 'show cdp neighbors' to identify interfaces between devices.<br />
+
+
+Use command 'show cdp neighbors' to identify interfaces between networking devices.  <br />
+<img src="https://i.imgur.com/tHzgJdC.png" height="80%" width="80%" /> <br />
+Use command 'show interfaces status' to identify interfaces connected to endpoints. <br />
 Copy and paste commands from configuration file into command line of device:<br />
 
 [Part 2 - VLANs, Layer-2 EtherChannel](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
 Verify Results:<br />
+Verify steps 1 & 2 - flags & protocols: S, U, P, PAgP & LACP <br />
+<img src="https://i.imgur.com/W620KdV.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/44J6dSU.png" height="80%" width="80%" /> <br />
+Verify steps 3a - 3d:<br />
+<img src="https://i.imgur.com/5pFYomG.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/n44UmXU.png" height="80%" width="80%" /> <br />
+Verify steps 4a & 4b:<br />
+<img src="https://i.imgur.com/BtHatGu.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/wkj2qAe.png" height="80%" width="80%" /> <br />
+
