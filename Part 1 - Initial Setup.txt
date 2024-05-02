@@ -1,4 +1,4 @@
-EDGE ROUTER
+#EDGE ROUTER
 en
 conf t
 hostname R1
@@ -11,10 +11,10 @@ exec-timeout 30 0
 do write
 exit
 
-CORE & DISTRIBUTION LAYER SWITCHES
+#CORE & DISTRIBUTION LAYER SWITCHES (CHANGE HOSTNAME TO MATCH DEVICE!)
 en
 conf t
-hostname CSW1
+hostname *
 enable algorithm-type scrypt secret jonsitlab
 username cisco algorithm-type scrypt secret ccna
 line console 0
@@ -24,10 +24,10 @@ exec-timeout 30 0
 do write
 exit
 
-ACCESS LAYER SWITCH
+#ACCESS LAYER SWITCH (CHANGE HOSTNAME TO MATCH DEVICE!)
 en
 conf t
-hostname ASW-A1
+hostname ASW-*
 enable secret jonsitlab
 username cisco secret ccna
 line console 0
