@@ -61,5 +61,11 @@ Verify steps 3a - 3d:<br />
 <img src="https://i.imgur.com/n44UmXU.png" height="80%" width="80%" /> <br />
 Verify steps 4a & 4b:<br />
 <img src="https://i.imgur.com/BtHatGu.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/hoa6Ncc.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/wkj2qAe.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/ZIaOYsc.png" height="80%" width="80%" /> <br />
+Verify steps 5a - 5d:<br />
+<img src="https://i.imgur.com/GXMcUKo.png" height="80%" width="80%" /> <br />
+Verify steps 6a - 5d:<br />
+<img src="https://i.imgur.com/EYkrrJ2.png" height="80%" width="80%" /> <br />
 
