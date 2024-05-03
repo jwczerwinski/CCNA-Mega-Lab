@@ -1,11 +1,4 @@
-#VERIFY RESULTS:
-show etherchannel summary
-show interfaces trunk
-show vtp status
-show vlan brief
-show interfaces status
-
-#Info about steps:
+#INFO ABOUT STEPS:
 #Steps 3a, 7d, 8c - DTP is disabled with 'nonegotiate'
 #Step 7a - place LWAP connections in 'access vlan 99'
 #Step 8b - make WLC1 connection 'trunk native vlan 99'
@@ -165,3 +158,10 @@ interface f0/1
 switchport access vlan 30
 exit
 do write
+
+#VERIFY RESULTS:
+show etherchannel summary
+show interfaces trunk
+show vtp status
+show vlan brief
+show interfaces status
