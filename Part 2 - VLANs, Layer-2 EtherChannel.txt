@@ -1,0 +1,167 @@
+#VERIFY RESULTS:
+show etherchannel summary
+show interfaces trunk
+show vtp status
+show vlan brief
+show interfaces status
+
+#Info about steps:
+#Steps 3a, 7d, 8c - DTP is disabled with 'nonegotiate'
+#Step 7a - place LWAP connections in 'access vlan 99'
+#Step 8b - make WLC1 connection 'trunk native vlan 99'
+
+#OFFICE A
+#DISTRIBUTION SWITCHES
+#DSW-A*
+interface range g1/0/4-5
+channel-group 1 mode desirable
+interface range g1/0/1-3
+switchport mode trunk
+switchport nonegotiate
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 10,20,40,99
+interface port-channel 1
+switchport mode trunk
+switchport nonegotiate
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 10,20,40,99
+exit
+interface range g1/0/6-24, g1/1/3-4
+shutdown
+exit
+do write
+
+#DSW-A1 (VTP SERVER)
+vtp domain jonsitlab
+vtp version 2
+vlan 10
+name PCs
+vlan 20
+name Phones
+vlan 40
+name Wi-Fi
+vlan 99
+name Management
+exit
+do write
+
+#ACCESS SWITCHES
+#ASW-A*
+interface range g0/1-2 
+switchport mode trunk
+switchport nonegotiate
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 10,20,40,99
+exit
+vtp mode client
+interface f0/1
+switchport mode access
+switchport nonegotiate
+exit
+do write
+
+#ASW-A1
+interface f0/1
+switchport access vlan 99
+interface f0/2
+switchport mode trunk
+switchport trunk allowed vlan 40,99
+switchport trunk native vlan 99
+switchport nonegotiate
+exit
+interface range f0/3-24
+shutdown
+exit
+do write
+
+#ASW-A2
+interface f0/1
+switchport access vlan 10
+switchport voice vlan 20
+exit
+interface range f0/2-24
+shutdown
+exit
+do write
+
+#ASW-A3
+interface f0/1
+switchport access vlan 10
+switchport voice vlan 20
+exit
+interface range f0/2-24
+shutdown
+exit
+do write
+
+#OFFICE B
+#DISTRIBUTION SWITCHES
+#DSW-B*
+interface range g1/0/4-5
+channel-group 1 mode active
+interface range g1/0/1-3
+switchport mode trunk
+switchport nonegotiate
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 10,20,30,99
+interface port-channel 1
+switchport mode trunk
+switchport nonegotiate
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 10,20,30,99
+exit
+interface range g1/0/6-24, g1/1/3-4
+shutdown
+exit
+do write
+
+#DSW-B1 (VTP SERVER)
+vtp domain jonsitlab
+vtp version 2
+vlan 10
+name PCs
+vlan 20
+name Phones
+vlan 30
+name Servers
+vlan 99
+name Management
+exit
+do write
+
+#ACCESS SWITCHES
+#ASW-B*
+interface range g0/1-2
+switchport mode trunk
+switchport nonegotiate
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 10,20,30,99
+exit
+vtp mode client
+interface f0/1
+switchport mode access
+switchport nonegotiate
+exit
+interface range f0/2-24
+shutdown
+exit
+do write
+
+#ASW-B1
+interface f0/1
+switchport access vlan 99
+exit
+do write
+
+#ASW-B2
+interface f0/1
+switchport access vlan 10
+switchport voice vlan 20
+exit
+do write
+
+#ASW-B3
+interface f0/1
+switchport access vlan 30
+exit
+do write
