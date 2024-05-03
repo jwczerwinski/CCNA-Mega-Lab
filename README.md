@@ -52,7 +52,7 @@ Identify interfaces connecting to endpoints - Use command 'show interfaces statu
 <img src="https://i.imgur.com/EbKSBuH.png" height="80%" width="80%" /> <br />
 Copy and paste commands from configuration file into command line of device:<br />
 
-[Part 2 - VLANs, Layer-2 EtherChannel](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
+[Part 2 - VLANs, Layer-2 EtherChannel](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%202%20-%20VLANs%2C%20Layer-2%20EtherChannel.txt)<br />
 Verify Results:<br />
 Verify steps 1 & 2 - flags & protocols: S, U, P, PAgP & LACP <br />
 <img src="https://i.imgur.com/HOT8ejU.png" height="80%" width="80%" /> <br />
