@@ -66,6 +66,14 @@ Verify steps 4a & 4b:<br />
 <img src="https://i.imgur.com/ZIaOYsc.png" height="80%" width="80%" /> <br />
 Verify steps 5a - 5d:<br />
 <img src="https://i.imgur.com/GXMcUKo.png" height="80%" width="80%" /> <br />
-Verify steps 6a - 5d:<br />
+Verify steps 6a - 6d:<br />
 <img src="https://i.imgur.com/EYkrrJ2.png" height="80%" width="80%" /> <br />
-
+Verify steps 7a - 7d:<br />
+<img src="https://i.imgur.com/krs2Mrl.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/5QkkS31.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/cI5Asnj.png" height="80%" width="80%" /> <br />
+Verify steps 8a - 8c:<br />
+<img src="https://i.imgur.com/yTa6ARF.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/uo8hSDk.png" height="80%" width="80%" /> <br />
+Verify step 9:<br />
+<img src="https://i.imgur.com/GOBRhXL.png" height="80%" width="80%" /> <br />
