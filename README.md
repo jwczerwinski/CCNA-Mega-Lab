@@ -46,9 +46,9 @@ Verify Results:<br />
 <img src="https://i.imgur.com/gMdZAzs.png" height="80%" width="80%" /> <br />
 
 
-Use command 'show cdp neighbors' to identify interfaces between networking devices.  <br />
+Identify interfaces connecting networking devices - Use command 'show cdp neighbors'.  <br />
 <img src="https://i.imgur.com/NzqrmcO.png" height="80%" width="80%" /> <br />
-Use command 'show interfaces status' to identify interfaces connected to endpoints. <br />
+Identify interfaces connecting to endpoints - Use command 'show interfaces status'. <br />
 <img src="https://i.imgur.com/EbKSBuH.png" height="80%" width="80%" /> <br />
 Copy and paste commands from configuration file into command line of device:<br />
 
@@ -58,13 +58,13 @@ Verify steps 1 & 2 - flags & protocols: S, U, P, PAgP & LACP <br />
 <img src="https://i.imgur.com/HOT8ejU.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/Go2L4UG.png" height="80%" width="80%" /> <br />
 Verify steps 3a - 3d:<br />
-<img src="https://i.imgur.com/5pFYomG.png" height="80%" width="80%" /> <br />
-<img src="https://i.imgur.com/n44UmXU.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/8FGZEPx.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/gpSvZCN.png" height="80%" width="80%" /> <br />
 Verify steps 4a & 4b:<br />
-<img src="https://i.imgur.com/BtHatGu.png" height="80%" width="80%" /> <br />
-<img src="https://i.imgur.com/hoa6Ncc.png" height="80%" width="80%" /> <br />
-<img src="https://i.imgur.com/wkj2qAe.png" height="80%" width="80%" /> <br />
-<img src="https://i.imgur.com/ZIaOYsc.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/U32BiGm.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/EALK5AO.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/FDd3i6v.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/ZggCAdl.png" height="80%" width="80%" /> <br />
 Verify steps 5a - 5d:<br />
 <img src="https://i.imgur.com/GXMcUKo.png" height="80%" width="80%" /> <br />
 Verify steps 6a - 6d:<br />
