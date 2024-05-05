@@ -28,7 +28,7 @@ Comprehensive lab covers all configuration topics on the CCNA exam. This lab cov
 
 <h1>Part 1 - Initial Setup</h1>
 <img src="https://i.imgur.com/MvVbDhm.png" height="80%" width="80%" /> <br />
-Adjust hostnames in configuration file for each router/swtich based on the layer in the network topology (edge, core, distrbution, access), then copy and paste commands from configuration file into command line of device:<br />
+Adjust hostnames in this configuration file for each router/swtich based on the layer in the network topology (edge, core, distrbution, access), then copy and paste commands from configuration file into command line of device:<br />
 
 [Part 1 - Initial Setup](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
 Verify Results:<br />
@@ -44,13 +44,12 @@ Verify Results:<br />
 
 <h1>Part 2 - VLANs, Layer-2 EtherChannel</h1>
 <img src="https://i.imgur.com/gMdZAzs.png" height="80%" width="80%" /> <br />
-
-
 Identify interfaces connecting networking devices - Use command 'show cdp neighbors'.  <br />
 <img src="https://i.imgur.com/NzqrmcO.png" height="80%" width="80%" /> <br />
 Identify interfaces connecting to endpoints - Use command 'show interfaces status'. <br />
 <img src="https://i.imgur.com/EbKSBuH.png" height="80%" width="80%" /> <br />
-Copy and paste commands from configuration file into command line of device:<br />
+
+Copy and paste commands from this configuration file into command line of device:<br />
 
 [Part 2 - VLANs, Layer-2 EtherChannel](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%202%20-%20VLANs%2C%20Layer-2%20EtherChannel.txt)<br />
 Verify Results:<br />
@@ -78,3 +77,17 @@ Verify steps 8a - 8c:<br />
 <img src="https://i.imgur.com/uo8hSDk.png" height="80%" width="80%" /> <br />
 Verify step 9:<br />
 <img src="https://i.imgur.com/GOBRhXL.png" height="80%" width="80%" /> <br />
+
+
+<h1>Part 3 - IP Addresses, Layer-3 Etherchannel, HSRP</h1>
+<img src="https://i.imgur.com/ljUxIqH.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/CW9eW90.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/zUUUgUI.png" height="80%" width="80%" /> <br />
+
+Command 'show cdp neighbor' will only show interface connections between router and core switches until after step 1.<br />
+Copy and paste commands from this configuration file into command line of device:<br />
+
+[Part 3 - IP Addresses, Layer-3 Etherchannel, HSRP](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%202%20-%20VLANs%2C%20Layer-2%20EtherChannel.txt)<br />
+Verify Results:<br />
+Verify step 1: <br />
+<img src="https://i.imgur.com/HOT8ejU.png" height="80%" width="80%" /> <br />
