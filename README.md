@@ -76,7 +76,7 @@ Verify steps 8a - 8c:<br />
 <img src="https://i.imgur.com/yTa6ARF.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/uo8hSDk.png" height="80%" width="80%" /> <br />
 Verify step 9:<br />
-<img src="https://i.imgur.com/GOBRhXL.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/NMKzBjm.png" height="80%" width="80%" /> <br />
 
 
 <h1>Part 3 - IP Addresses, Layer-3 Etherchannel, HSRP</h1>
@@ -84,10 +84,22 @@ Verify step 9:<br />
 <img src="https://i.imgur.com/CW9eW90.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/zUUUgUI.png" height="80%" width="80%" /> <br />
 
-Command 'show cdp neighbor' will only show interface connections between router and core switches until after step 1.<br />
+Command 'show cdp neighbor' won't show interface connections between router and core switches until after step 1. See excel file downloaded at beginning of walk-through for interface connections and IP addressing scheme. <br />
 Copy and paste commands from this configuration file into command line of device:<br />
+
 
 [Part 3 - IP Addresses, Layer-3 Etherchannel, HSRP](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%202%20-%20VLANs%2C%20Layer-2%20EtherChannel.txt)<br />
 Verify Results:<br />
 Verify step 1: <br />
-<img src="https://i.imgur.com/HOT8ejU.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/BDPmZ7d.png" height="80%" width="80%" /> <br />
+Verify step 2: <br />
+<img src="https://i.imgur.com/6QgQiKW.png" height="80%" width="80%" /> <br />
+Verify step 3: <br />
+<img src="https://i.imgur.com/FXKlUUv.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/zsnbezL.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/IwukWx7.png" height="80%" width="80%" /> <br />
+Verify step 4: <br />
+<img src="https://i.imgur.com/Qm7pm1a.png" height="80%" width="80%" /> <br />
+Verify steps 4 - 9 (same verification for all core and distribution switches): <br />
+<img src="https://i.imgur.com/Qm7pm1a.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/b6V0aRh.png" height="80%" width="80%" /> <br />
