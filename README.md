@@ -88,7 +88,7 @@ Command 'show cdp neighbor' won't show interface connections between router and 
 Copy and paste commands from this configuration file into command line of device:<br />
 
 
-[Part 3 - IP Addresses, Layer-3 Etherchannel, HSRP](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%202%20-%20VLANs%2C%20Layer-2%20EtherChannel.txt)<br />
+[Part 3 - IP Addresses, Layer-3 Etherchannel, HSRP](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%20Etherchannel%2C%20HSRP.txt)<br />
 Verify Results:<br />
 Verify step 1: <br />
 <img src="https://i.imgur.com/BDPmZ7d.png" height="80%" width="80%" /> <br />
