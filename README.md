@@ -103,3 +103,16 @@ Verify step 4: <br />
 Verify steps 4 - 9 (same verification for all core and distribution switches): <br />
 <img src="https://i.imgur.com/Qm7pm1a.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/b6V0aRh.png" height="80%" width="80%" /> <br />
+Verify step 10: <br />
+<img src="https://i.imgur.com/aCh3uhK.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/KfylBz7.png" height="80%" width="80%" /> <br />
+Verify step 11: <br />
+<img src="https://i.imgur.com/ayMOVZq.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/zLppLVQ.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/ayMOVZq.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/5MmQkk9.png" height="80%" width="80%" /> <br />
+Verify steps 12 - 19: <br />
+<img src="https://i.imgur.com/69raYo4.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/7XFhLEO.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/R1UpTcn.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/abyNB2R.png" height="80%" width="80%" /> <br />
