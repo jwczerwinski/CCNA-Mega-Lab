@@ -1,0 +1,255 @@
+#INFO ABOUT STEPS:
+#Step 1 - Command 'show cdp neighbor' won't show interface connections between router and core switches until after step 1.
+#Steps 12-19 - Distribution switches will act as the default gateway for each VLAN.
+
+#R1 - EDGE ROUTER
+interface range g0/0/0,g0/1/0
+ip address dhcp
+no shutdown
+interface g0/0
+ip address 10.0.0.33 255.255.255.252
+no shutdown
+interface g0/1
+ip address 10.0.0.37 255.255.255.252
+no shutdown
+interface loopback0
+ip address 10.0.0.76 255.255.255.255
+exit
+do write
+
+#CORE SWITCHES
+ip routing
+interface range g1/0/2-3
+no switchport
+channel-group 1 mode desirable
+exit
+do write
+
+#CSW1
+interface po1
+ip address 10.0.0.41 255.255.255.252
+interface g1/0/1
+no switchport
+ip address 10.0.0.34 255.255.255.252
+interface g1/1/1
+no switchport
+ip address 10.0.0.45 255.255.255.252
+interface g1/1/2
+no switchport
+ip address 10.0.0.49 255.255.255.252
+interface g1/1/3
+no switchport
+ip address 10.0.0.53 255.255.255.252
+interface g1/1/4
+no switchport
+ip address 10.0.0.57 255.255.255.252
+interface loopback0
+ip address 10.0.0.77 255.255.255.255
+interface range g1/0/4-24
+shutdown
+exit 
+do write
+
+#CSW2
+interface po1
+ip address 10.0.0.42 255.255.255.252
+interface g1/0/1
+no switchport
+ip address 10.0.0.38 255.255.255.252
+interface g1/1/1
+no switchport
+ip address 10.0.0.61 255.255.255.252
+interface g1/1/2
+no switchport
+ip address 10.0.0.65 255.255.255.252
+interface g1/1/3
+no switchport
+ip address 10.0.0.69 255.255.255.252
+interface g1/1/4
+no switchport
+ip address 10.0.0.73 255.255.255.252
+interface loopback0
+ip address 10.0.0.78 255.255.255.255
+interface range g1/0/4-24
+shutdown
+exit 
+do write
+
+#DISTRIBUTION SWITCHES
+ip routing
+
+#DSW-A1
+interface g1/1/1
+no switchport
+ip address 10.0.0.46 255.255.255.252
+interface g1/1/2
+no switchport
+ip address 10.0.0.62 255.255.255.252
+interface loopback0
+ip address 10.0.0.79 255.255.255.255
+interface vlan 99
+ip address 10.0.0.2 255.255.255.240
+standby version 2
+standby 1 ip 10.0.0.1
+standby 1 priority 105
+standby 1 preempt
+interface vlan 10
+ip address 10.1.0.2 255.255.255.0
+standby version 2
+standby 2 ip 10.1.0.1
+standby 2 priority 105
+standby 2 preempt
+interface vlan 20
+ip address 10.2.0.2 255.255.255.0
+standby version 2
+standby 3 ip 10.2.0.1
+interface vlan 40
+ip address 10.6.0.2 255.255.255.0
+standby version 2
+standby 4 ip 10.6.0.1
+exit
+do write
+
+#DSW-A2
+interface g1/1/1
+no switchport
+ip address 10.0.0.50 255.255.255.252
+interface g1/1/2
+no switchport
+ip address 10.0.0.66 255.255.255.252
+interface loopback0
+ip address 10.0.0.80 255.255.255.255
+interface vlan 99
+ip address 10.0.0.3 255.255.255.240
+standby version 2
+standby 1 ip 10.0.0.1
+interface vlan 10
+ip address 10.1.0.3 255.255.255.0
+standby version 2
+standby 2 ip 10.1.0.1
+interface vlan 20
+ip address 10.2.0.3 255.255.255.0
+standby version 2
+standby 3 ip 10.2.0.1
+standby 3 priority 105
+standby 3 preempt
+interface vlan 40
+ip address 10.6.0.3 255.255.255.0
+standby version 2
+standby 4 ip 10.6.0.1
+standby 4 priority 105
+standby 4 preempt
+exit
+do write
+
+#DSW-B1
+interface g1/1/1
+no switchport
+ip address 10.0.0.54 255.255.255.252
+interface g1/1/2
+no switchport
+ip address 10.0.0.70 255.255.255.252
+interface loopback0
+ip address 10.0.0.81 255.255.255.255
+interface vlan 99
+ip address 10.0.0.18 255.255.255.240
+standby version 2
+standby 1 ip 10.0.0.17
+standby 1 priority 105
+standby 1 preempt
+interface vlan 10
+ip address 10.3.0.2 255.255.255.0
+standby version 2
+standby 2 ip 10.3.0.1
+standby 2 priority 105
+standby 2 preempt
+interface vlan 20
+ip address 10.4.0.2 255.255.255.0
+standby version 2
+standby 3 ip 10.4.0.1
+interface vlan 30
+ip address 10.5.0.2 255.255.255.0
+standby version 2
+standby 4 ip 10.5.0.1
+exit
+do write
+
+#DSW-B2
+interface g1/1/1
+no switchport
+ip address 10.0.0.58 255.255.255.252
+interface g1/1/2
+no switchport
+ip address 10.0.0.74 255.255.255.252
+interface loopback0
+ip address 10.0.0.82 255.255.255.255
+interface vlan 99
+ip address 10.0.0.19 255.255.255.240
+standby version 2
+standby 1 ip 10.0.0.17
+interface vlan 10
+ip address 10.3.0.3 255.255.255.0
+standby version 2
+standby 2 ip 10.3.0.1
+interface vlan 20
+ip address 10.4.0.3 255.255.255.0
+standby version 2
+standby 3 ip 10.4.0.1
+standby 3 priority 105
+standby 3 preempt
+interface vlan 30
+ip address 10.5.0.3 255.255.255.0
+standby version 2
+standby 4 ip 10.5.0.1
+standby 4 priority 105
+standby 4 preempt
+exit
+do write
+
+#ASW-A1
+ip default-gateway 10.0.0.1
+interface vlan 99
+ip address 10.0.0.4 255.255.255.240
+exit
+do write
+
+#ASW-A2
+ip default-gateway 10.0.0.1
+interface vlan 99
+ip address 10.0.0.5 255.255.255.240
+exit
+do write
+
+#ASW-A3
+ip default-gateway 10.0.0.1
+interface vlan 99
+ip address 10.0.0.6 255.255.255.240
+exit
+do write
+
+#ASW-B1
+ip default-gateway 10.0.0.17
+interface vlan 99
+ip address 10.0.0.20 255.255.255.240
+exit
+do write
+
+#ASW-B2
+ip default-gateway 10.0.0.17
+interface vlan 99
+ip address 10.0.0.21 255.255.255.240
+exit
+do write
+
+#ASW-B3
+ip default-gateway 10.0.0.17
+interface vlan 99
+ip address 10.0.0.22 255.255.255.240
+exit
+do write
+
+#VERIFY RESULTS:
+show ip interface brief
+show running-config
+show cdp neighbor
+ping
