@@ -1,6 +1,6 @@
 #INFO ABOUT STEPS:
 #Step 1 - Command 'show cdp neighbor' won't show interface connections between router and core switches until after step 1.
-#Steps 12-19 - Distribution switches will act as the default gateway for each VLAN.
+#Steps 12-19 - VIP (virtual IP address) of distribution switches will act as the default gateway for each the access switches.
 
 #R1 - EDGE ROUTER
 interface range g0/0/0,g0/1/0
