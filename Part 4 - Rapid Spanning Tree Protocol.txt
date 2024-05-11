@@ -1,0 +1,45 @@
+#INFO ABOUT STEPS:
+#Step 2 - For ASW-A1 interface f0/2 connection with WLC1, use command 'spanning-tree portfast trunk' to enable portfast on the trunk connection.
+
+#DISTRIBUTION SWITCHES
+spanning-tree mode rapid-pvst
+
+#DSW-A1
+spanning-tree vlan 10,99 priority 0
+spanning-tree vlan 20,40 priority 4096
+do write
+
+#DSW-A2
+spanning-tree vlan 10,99 priority 4096
+spanning-tree vlan 20,40 priority 0
+do write
+
+#DSW-B1
+spanning-tree vlan 10,99 priority 0
+spanning-tree vlan 20,30 priority 4096
+do write
+
+#DSW-B2
+spanning-tree vlan 10,99 priority 4096
+spanning-tree vlan 20,30 priority 0
+do write
+
+#ACCESS SWITCHES
+spanning-tree mode rapid-pvst
+interface f0/1
+spanning-tree portfast
+spanning-tree bpduguard enable
+exit
+do write
+
+#ASW-A1
+interface f0/2
+spanning-tree portfast trunk
+spanning-tree bpduguard enable
+exit
+do write
+
+#VERIFY RESULTS:
+show running-config
+show spanning-tree
+show spanning-tree vlan <vlan ID>
