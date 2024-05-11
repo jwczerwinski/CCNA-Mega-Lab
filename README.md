@@ -116,3 +116,17 @@ Verify steps 12 - 19: <br />
 <img src="https://i.imgur.com/7XFhLEO.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/R1UpTcn.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/abyNB2R.png" height="80%" width="80%" /> <br />
+
+<h1>Part 4 - Rapid Spanning Tree Protocol</h1>
+<img src="https://i.imgur.com/bgtj0qH.png" height="80%" width="80%" /> <br />
+
+Copy and paste commands from this configuration file into command line of device:<br />
+
+[Part 4 - Rapid Spanning Tree Protocol](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%20Etherchannel%2C%20HSRP.txt)<br />
+Verify Results:<br />
+Verify steps 1, 1a & 1b: <br />
+<img src="https://i.imgur.com/MmemZnk.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/SDZ9s5n.png" height="80%" width="80%" /> <br />
+Verify step 2: <br />
+<img src="https://i.imgur.com/NmAowPX.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/KPOj8qk.png" height="80%" width="80%" /> <br />
