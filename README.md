@@ -123,7 +123,7 @@ Verify steps 12 - 19: <br />
 #Step 2 - For ASW-A1 interface f0/2 connection with WLC1, use command 'spanning-tree portfast trunk' to enable portfast on the trunk connection.<br />
 Copy and paste commands from this configuration file into command line of device:<br />
 
-[Part 4 - Rapid Spanning Tree Protocol](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%20Etherchannel%2C%20HSRP.txt)<br />
+[Part 4 - Rapid Spanning Tree Protocol](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%204%20-%20Rapid%20Spanning%20Tree%20Protocol.txt)<br />
 Verify Results:<br />
 Verify steps 1, 1a & 1b: <br />
 <img src="https://i.imgur.com/MmemZnk.png" height="80%" width="80%" /> <br />
@@ -137,7 +137,7 @@ Verify step 2: <br />
 
 Copy and paste commands from this configuration file into command line of device:<br />
 
-[Part 5 - Static and Dynamic Routing](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%20Etherchannel%2C%20HSRP.txt)<br />
+[Part 5 - Static and Dynamic Routing](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%205%20-%20Static%20and%20Dynamic%20Routing.txt)<br />
 Verify Results:<br />
 Verify steps 1a - 1g: <br />
 <img src="https://i.imgur.com/sQMr7zk.png" height="80%" width="80%" /> <br />
