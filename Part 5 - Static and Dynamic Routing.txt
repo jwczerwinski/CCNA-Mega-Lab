@@ -129,6 +129,7 @@ do write
 show running-config
 show ip ospf
 show ip ospf neigh
+show ip ospf interface
 show ip interface breif
 show interface
 ping
