@@ -1,0 +1,136 @@
+#INFO ABOUT STEPS:
+#Step 1c - Command 'net 10.0.0.41 0.0.0.0 area 0' advertises only one the IP address of 10.0.0.41 in the ospf area 0 shared with other devices. A wildcard mask of 255.255.255.255 would advertise all addresses.
+#Step 2a - Command 'ip route' sets a static route, where "Recursive" only specifies the next hop IP address and "Directly connected" specifies both the next hop IP address and the exit interface. Also, AD (administrative distance) default is 1 and is set with last number of the 'ip route' command.
+
+#R1 - EDGE ROUTER
+router ospf 1
+router-id 10.0.0.76
+default-information originate
+passive-interface l0
+int l0
+ip ospf 1 area 0
+interface range g0/0-1
+ip ospf 1 area 0
+ip ospf network point-to-point
+exit
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+ip route 0.0.0.0 0.0.0.0 203.0.113.5 2
+do write
+
+#CORE SWITCHES
+router ospf 1
+passive-interface l0
+interface range g1/0/1,g1/1/1-4
+ip ospf network point-to-point
+exit
+do write
+
+#CSW1
+router ospf 1
+router-id 10.0.0.77
+net 10.0.0.41 0.0.0.0 area 0
+net 10.0.0.34 0.0.0.0 area 0
+net 10.0.0.45 0.0.0.0 area 0
+net 10.0.0.49 0.0.0.0 area 0
+net 10.0.0.53 0.0.0.0 area 0
+net 10.0.0.57 0.0.0.0 area 0
+net 10.0.0.77 0.0.0.0 area 0
+exit
+do write
+
+#CSW2
+router ospf 1
+router-id 10.0.0.78
+net 10.0.0.42 0.0.0.0 area 0
+net 10.0.0.38 0.0.0.0 area 0
+net 10.0.0.61 0.0.0.0 area 0
+net 10.0.0.65 0.0.0.0 area 0
+net 10.0.0.69 0.0.0.0 area 0
+net 10.0.0.73 0.0.0.0 area 0
+net 10.0.0.78 0.0.0.0 area 0
+exit
+do write
+
+#DISTRIBUTION SWITCHES
+router ospf 1
+passive-interface l0
+passive-interface vlan 10
+passive-interface vlan 20
+interface range g1/1/1-2
+ip ospf network point-to-point
+exit
+do write
+
+#DSW-A*
+router ospf 1
+passive-interface vlan 40
+exit
+do write
+
+#DSW-A1
+router ospf 1
+router-id 10.0.0.79
+net 10.0.0.46 0.0.0.0 area 0
+net 10.0.0.62 0.0.0.0 area 0
+net 10.0.0.79 0.0.0.0 area 0
+net 10.1.0.2 0.0.0.0 area 0
+net 10.2.0.2 0.0.0.0 area 0
+net 10.6.0.2 0.0.0.0 area 0
+net 10.0.0.2 0.0.0.0 area 0
+exit
+do write
+
+#DSW-A2
+router ospf 1
+router-id 10.0.0.80
+net 10.0.0.50 0.0.0.0 area 0
+net 10.0.0.66 0.0.0.0 area 0
+net 10.0.0.80 0.0.0.0 area 0
+net 10.1.0.3 0.0.0.0 area 0
+net 10.2.0.3 0.0.0.0 area 0
+net 10.6.0.3 0.0.0.0 area 0
+net 10.0.0.3 0.0.0.0 area 0
+exit
+do write
+
+#DSW-B*
+router ospf 1
+passive-interface vlan 30
+exit
+do write
+
+#DSW-B1
+router ospf 1
+router-id 10.0.0.81
+net 10.0.0.54 0.0.0.0 area 0
+net 10.0.0.70 0.0.0.0 area 0
+net 10.0.0.81 0.0.0.0 area 0
+net 10.3.0.2 0.0.0.0 area 0
+net 10.4.0.2 0.0.0.0 area 0
+net 10.5.0.2 0.0.0.0 area 0
+net 10.0.0.18 0.0.0.0 area 0
+exit
+do write
+
+#DSW-B2
+router ospf 1
+router-id 10.0.0.82
+net 10.0.0.58 0.0.0.0 area 0
+net 10.0.0.74 0.0.0.0 area 0
+net 10.0.0.82 0.0.0.0 area 0
+net 10.3.0.3 0.0.0.0 area 0
+net 10.4.0.3 0.0.0.0 area 0
+net 10.5.0.3 0.0.0.0 area 0
+net 10.0.0.19 0.0.0.0 area 0
+exit
+do write
+
+#VERIFY RESULTS:
+show running-config
+show ip ospf
+show ip ospf neigh
+show ip interface breif
+show interface
+ping
+show ip route
+show ip int br | exclude unassign
