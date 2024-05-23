@@ -151,5 +151,8 @@ Verify steps 1a - 1g: <br />
 Verify steps 2a - 2b: <br />
 <img src="https://i.imgur.com/rWmHRMX.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/Mw6wDGx.png" height="80%" width="80%" /> <br />
-<img src="https://i.imgur.com/OEqDFr8.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/SimXhoY.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/3NdyKpL.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/1Q59Yv5.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/E7SdPkv.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/en8MJks.png" height="80%" width="80%" /> <br />
