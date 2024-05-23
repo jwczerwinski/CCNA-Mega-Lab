@@ -167,4 +167,4 @@ Copy and paste commands from this configuration file into command line of device
 [Part 6 - Network Services: DHCP, DNS, NTP, SNMP, Syslog, FTP, SSH, NAT](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%20Etherchannel%2C%0HSRP.txt)<br />
 Verify Results:<br />
 Verify step 1: <br />
-<img src="https://i.imgur.com/sQMr7zk.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/QMr7zk.png" height="80%" width="80%" /> <br />
