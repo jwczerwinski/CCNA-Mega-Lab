@@ -140,6 +140,16 @@ Copy and paste commands from this configuration file into command line of device
 [Part 5 - Static and Dynamic Routing](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%20Etherchannel%2C%20HSRP.txt)<br />
 Verify Results:<br />
 Verify steps 1a - 1g: <br />
-<img src="https://i.imgur.com/Auxo7vS.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/sQMr7zk.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/U0wrJZH.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/FKkSQPv.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/Xr1sdHK.png" height="80%" width="80%" /> <br />
-
+<img src="https://i.imgur.com/PNNJM9b.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/hHa6xPi.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/u9dtdWO.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/yXnQ2kX.png" height="80%" width="80%" /> <br />
+Verify steps 2a - 2b: <br />
+<img src="https://i.imgur.com/rWmHRMX.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/Mw6wDGx.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/OEqDFr8.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/1Q59Yv5.png" height="80%" width="80%" /> <br />
