@@ -1,0 +1,137 @@
+#INFO ABOUT STEPS:
+#Step 3 - Add DNS entries in the GUI services tab of SVR1. 
+For an "A Record": Name = jonsitlab.com, Address = [IP address]. 
+For a "CNAME": Name = www.jonsitlab.com, Host Name = jonsitlab.com.
+
+#ALL DEVICES
+ip domain name jonsitlab.com
+ip name-server 10.5.0.4
+ntp authentication-key 1 md5 ccna
+ntp trusted-key 1
+snmp-server community SNMPSTRING ro
+logging 10.5.0.4
+logging trap debugging
+logging buffered 8192
+exit
+do write
+
+#R1 - EDGE ROUTER
+ip dhcp excluded-address 10.0.0.1 10.0.0.10
+ip dhcp excluded-address 10.1.0.1 10.0.0.10
+ip dhcp excluded-address 10.2.0.1 10.0.0.10
+ip dhcp excluded-address 10.0.0.17 10.0.0.26
+ip dhcp excluded-address 10.3.0.1 10.0.0.10
+ip dhcp excluded-address 10.4.0.1 10.0.0.10
+ip dhcp excluded-address 10.6.0.1 10.0.0.10
+ip dhcp pool A-Mgmt
+network 10.0.0.0 255.255.255.240
+default-router 10.0.0.1
+domain-name jonsitlab.com
+dns-server 10.5.0.4
+option 43 ip 10.0.0.7
+ip dhcp pool A-PC
+network 10.1.0.0 255.255.255.0
+default-router 10.1.0.1
+domain-name jonsitlab.com
+dns-server 10.5.0.4
+ip dhcp pool A-Phone
+network 10.2.0.0 255.255.255.0
+default-router 10.2.0.1
+domain-name jonsitlab.com
+dns-server 10.5.0.4
+ip dhcp pool B-Mgmt
+network 10.17.0.0 255.255.255.240
+default-router 10.0.0.17
+domain-name jonsitlab.com
+dns-server 10.5.0.4
+ip dhcp pool B-PC
+network 10.3.0.0 255.255.255.0
+default-router 10.3.0.1
+domain-name jonsitlab.com
+dns-server 10.5.0.4
+ip dhcp pool B-Phone
+network 10.4.0.0 255.255.255.0
+default-router 10.4.0.1
+domain-name jonsitlab.com
+dns-server 10.5.0.4
+ip dhcp pool Wi-Fi
+network 10.6.0.0 255.255.255.0
+default-router 10.6.0.1
+domain-name jonsitlab.com
+dns-server 10.5.0.4
+exit
+ntp master 5
+ntp server 216.239.35.0
+ntp authentication-key 1 md5 ccna
+ntp trusted-key 1
+do write
+
+#CORE SWITCHES
+ntp server 10.0.0.76 key 1
+exit
+do write
+
+#CSW1
+exit
+do write
+
+#CSW2
+exit
+do write
+
+#DISTRIBUTION SWITCHES
+interface vlan 10
+ip helper-address 10.0.0.76
+interface vlan 20
+ip helper-address 10.0.0.76
+interface vlan 99
+ip helper-address 10.0.0.76
+ntp server 10.0.0.76 key 1
+exit
+do write
+
+#DSW-A*
+interface vlan 40
+ip helper-address 10.0.0.76
+exit
+do write
+
+#DSW-A1
+exit
+do write
+
+#DSW-A2
+exit
+do write
+
+#DSW-B*
+interface vlan 30
+ip helper-address 10.0.0.76
+exit
+do write
+
+#DSW-B1
+exit
+do write
+
+#DSW-B2
+exit
+do write
+
+#ACCESS SWITCHES
+ntp server 10.0.0.76 key 1
+exit
+do write
+
+#VERIFY RESULTS (ROUTER & SWITCHES):
+show running-config
+show ip dhcp binding
+show logging
+show interface
+ping
+show ip route
+
+#VERIFY RESULTS (PCs):
+ipconfig /renew
+ipconfig
+ping [ip address | FQDN] (try default gateway, internet addresses, etc.)
