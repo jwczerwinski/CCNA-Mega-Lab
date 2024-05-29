@@ -1,4 +1,4 @@
-<h1>CCNA Mega Lab</h1>
+![image](https://github.com/jwczerwinski/CCNA-Mega-Lab/assets/147276581/70bd9626-2b58-48a7-8f72-1106ce01c6b8)<h1>CCNA Mega Lab</h1>
 
 <h2>Description</h2>
 Comprehensive lab covers all configuration topics on the CCNA exam. This lab covers a complete network configuration from zero, including topics like IPv4 and IPv6, static routes, VLANs, spanning tree, OSPF, EtherChannel, DHCP, DNS, NAT, SSH, security features, wireless, etc. – everything on the CCNA exam. <br />
@@ -167,4 +167,13 @@ Copy and paste commands from this configuration file into command line of device
 [Part 6 - Network Services: DHCP, DNS, NTP, SNMP, Syslog, FTP, SSH, NAT](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%20Etherchannel%2C%0HSRP.txt)<br />
 Verify Results:<br />
 Verify step 1: <br />
-<img src="https://i.imgur.com/QMr7zk.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/9mkKQWt.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/wkpuUuu.png" height="80%" width="80%" /> <br />
+Verify step 2: <br />
+<img src="https://i.imgur.com/uRC5BIP.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/AxXDdKb.png" height="80%" width="80%" /> <br />
+Verify step 3a - 3d: <br />
+<img src="https://i.imgur.com/MTTQtL0.png" height="80%" width="80%" /> <br />
+Verify step 4: <br />
+<img src="https://i.imgur.com/k9cMTXw.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/FG36w9D.png" height="80%" width="80%" /> <br />
