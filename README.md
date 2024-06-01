@@ -177,3 +177,6 @@ Verify step 3a - 3d: <br />
 Verify step 4: <br />
 <img src="https://i.imgur.com/k9cMTXw.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/FG36w9D.png" height="80%" width="80%" /> <br />
+Verify steps 5a - 5c: <br />
+<img src="https://i.imgur.com/qRdHX7U.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/Nk9g83K.png" height="80%" width="80%" /> <br />
