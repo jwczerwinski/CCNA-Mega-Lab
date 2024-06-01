@@ -180,3 +180,9 @@ Verify step 4: <br />
 Verify steps 5a - 5c: <br />
 <img src="https://i.imgur.com/qRdHX7U.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/Nk9g83K.png" height="80%" width="80%" /> <br />
+Verify step 6a: <br />
+<img src="https://i.imgur.com/qRdHX7U.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/1VdxNFn.png" height="80%" width="80%" /> <br />
+Verify steps 7 - 8b: <br />
+<img src="https://i.imgur.com/kxmpaGB.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/lvId4Ax.png" height="80%" width="80%" /> <br />
