@@ -1,4 +1,4 @@
-![image](https://github.com/jwczerwinski/CCNA-Mega-Lab/assets/147276581/70bd9626-2b58-48a7-8f72-1106ce01c6b8)<h1>CCNA Mega Lab</h1>
+<h1>CCNA Mega Lab</h1>
 
 <h2>Description</h2>
 Comprehensive lab covers all configuration topics on the CCNA exam. This lab covers a complete network configuration from zero, including topics like IPv4 and IPv6, static routes, VLANs, spanning tree, OSPF, EtherChannel, DHCP, DNS, NAT, SSH, security features, wireless, etc. – everything on the CCNA exam. <br />
