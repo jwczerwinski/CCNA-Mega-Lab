@@ -2,6 +2,9 @@
 #Step 3 - Add DNS entries in the GUI services tab of SVR1. 
 For an "A Record": Name = jonsitlab.com, Address = [IP address]. 
 For a "CNAME": Name = www.jonsitlab.com, Host Name = jonsitlab.com.
+#Step 9b - DO THIS STEP 9 LAST! Find the new FTP file in SRV1 services tab, copy and paste to the command.
+#Step 10b - 0.0.0.255 wildcard mask = /24 subnet.
+#Step 11 - For SRV1 to ping google.com the DNS server must be specified as itself in the services tab.
 
 #ALL DEVICES
 ip domain name jonsitlab.com
@@ -12,6 +15,15 @@ snmp-server community SNMPSTRING ro
 logging 10.5.0.4
 logging trap debugging
 logging buffered 8192
+crypto key generate rsa
+4096
+ip ssh version 2
+access-list 1 permit 10.1.0.0 0.0.0.255
+line vty 0 15
+access-class 1 in
+login local
+transport input ssh
+logging synchronous
 exit
 do write
 
@@ -64,10 +76,36 @@ ntp master 5
 ntp server 216.239.35.0
 ntp authentication-key 1 md5 ccna
 ntp trusted-key 1
+ip ftp username cisco
+ip ftp password cisco
+ip nat inside source static 10.5.0.4 203.0.113.113
+interface range g0/0/0,g0/1/0
+ip nat outside
+interface range g0/0-1
+ip nat inside
+exit
+access-list 2 permit 10.1.0.0 0.0.0.255
+access-list 2 permit 10.2.0.0 0.0.0.255
+access-list 2 permit 10.3.0.0 0.0.0.255
+access-list 2 permit 10.4.0.0 0.0.0.255
+access-list 2 permit 10.6.0.0 0.0.0.255
+ip nat pool POOL1 203.0.113.200 203.0.113.207 netmask 255.255.255.248
+ip nat inside source list 2 pool POOL1 overload
+interface g0/0/0
+shutdown
+exit
+router ospf 1
+no default-information originate
+default-information originate
+exit
+no cdp run
+lldp run
 do write
 
 #CORE SWITCHES
 ntp server 10.0.0.76 key 1
+no cdp run
+lldp run
 exit
 do write
 
@@ -86,21 +124,15 @@ interface vlan 20
 ip helper-address 10.0.0.76
 interface vlan 99
 ip helper-address 10.0.0.76
-ntp server 10.0.0.76 key 1
 exit
+ntp server 10.0.0.76 key 1
+no cdp run
+lldp run
 do write
 
 #DSW-A*
 interface vlan 40
 ip helper-address 10.0.0.76
-exit
-do write
-
-#DSW-A1
-exit
-do write
-
-#DSW-A2
 exit
 do write
 
@@ -110,28 +142,42 @@ ip helper-address 10.0.0.76
 exit
 do write
 
-#DSW-B1
-exit
-do write
-
-#DSW-B2
-exit
-do write
-
 #ACCESS SWITCHES
 ntp server 10.0.0.76 key 1
+no cdp run
+lldp run
+interface f0/0
+no lldp transmit
+exit
+do write
+
+#STEP 9 - R1 EDGE ROUTER (DO THIS STEP LAST, SINCE LOADING TIMES ARE LONG)
+do copy ftp flash 
+10.5.0.4
+c2900-universalk9-mz.SPA.155-3.M4a.bin
+#PRESS ENTER TO ACCEPT DEFAULT LOCATION, THEN WAIT A LONG TIME FOR THE DOWNLOAD
+boot system flash:c2900-universalk9-mz.SPA.155-3.M4a.bin
+#WAIT FOR BOOT
+reload
+#WAIT FOR SYSTEM TO RELOAD, THEN FIND COPY AND PASTE OLD FLASH IMAGE
+delete flash:c2900-universalk9-mz.SPA.151-4.M4.bin
 exit
 do write
 
 #VERIFY RESULTS (ROUTER & SWITCHES):
 show running-config
 show ip dhcp binding
+show ip dhcp pool
 show logging
 show interface
 ping
 show ip route
+show flash
+show version
+show ip ssh
 
-#VERIFY RESULTS (PCs):
+#VERIFY RESULTS (PCs & SRV1):
 ipconfig /renew
 ipconfig
 ping [ip address | FQDN] (try default gateway, internet addresses, etc.)
+ssh -l cisco 10.0.0.76
