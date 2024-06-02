@@ -191,4 +191,10 @@ Verify steps 7 - 8b: <br />
 Verify steps 9a - 9c: <br />
 <img src="https://i.imgur.co/kxmpaGB.png" height="80%" width="80%" /> <br />
 Verify steps 10a - 10f: <br />
-<img src="https://i.imgur.co/kxmpaGB.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/hCIIg07.png" height="80%" width="80%" /> <br />
+Verify step 11: <br />
+<img src="https://i.imgur.com/M9AQMtv.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/qruRFx9.png" height="80%" width="80%" /> <br />
+Verify steps 12a - 12d: <br />
+<img src="https://i.imgur.com/FYO0Yva.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/qtA2zWc.png" height="80%" width="80%" /> <br />
