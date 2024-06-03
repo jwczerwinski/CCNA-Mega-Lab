@@ -199,3 +199,6 @@ Verify steps 12a - 12d: <br />
 <img src="https://i.imgur.com/FYO0Yva.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/qtA2zWc.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/wQDBJ3C.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/RCjbpot.png" height="80%" width="80%" /> <br />
+Verify step 13: <br />
+<img src="https://i.imgur.com/uJuDBYp.png" height="80%" width="80%" /> <br />
