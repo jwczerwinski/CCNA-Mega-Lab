@@ -189,7 +189,7 @@ Verify steps 7 - 8b: <br />
 <img src="https://i.imgur.com/STuT7Ts.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/pq5idh1.png" height="80%" width="80%" /> <br />
 Verify steps 9a - 9c: <br />
-<img src="https://i.imgur.co/kxmpaGB.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/HICY6e1.png" height="80%" width="80%" /> <br />
 Verify steps 10a - 10f: <br />
 <img src="https://i.imgur.com/hCIIg07.png" height="80%" width="80%" /> <br />
 Verify step 11: <br />
