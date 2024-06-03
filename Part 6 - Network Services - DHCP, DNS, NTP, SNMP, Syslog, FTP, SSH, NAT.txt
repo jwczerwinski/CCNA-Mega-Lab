@@ -2,9 +2,10 @@
 #Step 3 - Add DNS entries in the GUI services tab of SVR1. 
 For an "A Record": Name = jonsitlab.com, Address = [IP address]. 
 For a "CNAME": Name = www.jonsitlab.com, Host Name = jonsitlab.com.
-#Step 9b - DO THIS STEP 9 LAST! Find the new FTP file in SRV1 services tab, copy and paste to the command.
+#Steps 5 & 6 - Verify results at the end of Part 6.
+#Step 9b - DO THIS STEP 9 LAST, SINCE LOADING TIMES ARE LONG! Find the new FTP file in SRV1 services tab, copy and paste to the command.
 #Step 10b - 0.0.0.255 wildcard mask = /24 subnet.
-#Step 11 - For SRV1 to ping google.com the DNS server must be specified as itself in the services tab.
+#Step 11 - For SRV1 to ping google.com, the DNS server must be specified as itself in the services tab.
 
 #ALL DEVICES
 ip domain name jonsitlab.com
@@ -106,15 +107,6 @@ do write
 ntp server 10.0.0.76 key 1
 no cdp run
 lldp run
-exit
-do write
-
-#CSW1
-exit
-do write
-
-#CSW2
-exit
 do write
 
 #DISTRIBUTION SWITCHES
@@ -146,7 +138,7 @@ do write
 ntp server 10.0.0.76 key 1
 no cdp run
 lldp run
-interface f0/0
+interface f0/1
 no lldp transmit
 exit
 do write
