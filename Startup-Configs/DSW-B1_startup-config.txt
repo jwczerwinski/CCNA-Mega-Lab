@@ -1,0 +1,259 @@
+!
+version 16.3.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname DSW-B1
+!
+!
+enable secret 9 $9$J19FIAftPZf7c3$m4ZHFa9BHExIXpNODcp6glxsHDNBd8O9hYYBDwRlKHU
+!
+!
+!
+!
+!
+!
+no ip cef
+ip routing
+!
+no ipv6 cef
+!
+!
+!
+username cisco secret 9 $9$J19FIAftPZf7c3$Mux3wTz1Kth/NxeyEk.E8.QBckaZchVfllsGnxO8/0A
+!
+!
+lldp run
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh version 2
+ip domain-name jonsitlab.com
+ip name-server 10.5.0.4
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree vlan 10,99 priority 0
+spanning-tree vlan 20,30 priority 4096
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.0.0.81 255.255.255.255
+!
+interface Port-channel1
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/1
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/2
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/3
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/4
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,99
+ switchport mode trunk
+ switchport nonegotiate
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/5
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,99
+ switchport mode trunk
+ switchport nonegotiate
+ channel-group 1 mode active
+!
+interface GigabitEthernet1/0/6
+ shutdown
+!
+interface GigabitEthernet1/0/7
+ shutdown
+!
+interface GigabitEthernet1/0/8
+ shutdown
+!
+interface GigabitEthernet1/0/9
+ shutdown
+!
+interface GigabitEthernet1/0/10
+ shutdown
+!
+interface GigabitEthernet1/0/11
+ shutdown
+!
+interface GigabitEthernet1/0/12
+ shutdown
+!
+interface GigabitEthernet1/0/13
+ shutdown
+!
+interface GigabitEthernet1/0/14
+ shutdown
+!
+interface GigabitEthernet1/0/15
+ shutdown
+!
+interface GigabitEthernet1/0/16
+ shutdown
+!
+interface GigabitEthernet1/0/17
+ shutdown
+!
+interface GigabitEthernet1/0/18
+ shutdown
+!
+interface GigabitEthernet1/0/19
+ shutdown
+!
+interface GigabitEthernet1/0/20
+ shutdown
+!
+interface GigabitEthernet1/0/21
+ shutdown
+!
+interface GigabitEthernet1/0/22
+ shutdown
+!
+interface GigabitEthernet1/0/23
+ shutdown
+!
+interface GigabitEthernet1/0/24
+ shutdown
+!
+interface GigabitEthernet1/1/1
+ no switchport
+ ip address 10.0.0.54 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf priority 1
+!
+interface GigabitEthernet1/1/2
+ no switchport
+ ip address 10.0.0.70 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf priority 1
+!
+interface GigabitEthernet1/1/3
+ shutdown
+!
+interface GigabitEthernet1/1/4
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ mac-address 0001.635b.4c01
+ ip address 10.3.0.2 255.255.255.0
+ ip helper-address 10.0.0.76
+ standby version 2
+ standby 2 ip 10.3.0.1
+ standby 2 priority 105
+ standby 2 preempt
+!
+interface Vlan20
+ mac-address 0001.635b.4c02
+ ip address 10.4.0.2 255.255.255.0
+ ip helper-address 10.0.0.76
+ standby version 2
+ standby 3 ip 10.4.0.1
+!
+interface Vlan30
+ mac-address 0001.635b.4c03
+ ip address 10.5.0.2 255.255.255.0
+ ip helper-address 10.0.0.76
+ standby version 2
+ standby 4 ip 10.5.0.1
+!
+interface Vlan99
+ mac-address 0001.635b.4c04
+ ip address 10.0.0.18 255.255.255.240
+ ip helper-address 10.0.0.76
+ standby version 2
+ standby 1 ip 10.0.0.17
+ standby 1 priority 105
+ standby 1 preempt
+!
+router ospf 1
+ router-id 10.0.0.81
+ log-adjacency-changes
+ passive-interface Loopback0
+ passive-interface Vlan10
+ passive-interface Vlan20
+ passive-interface Vlan30
+ network 10.0.0.54 0.0.0.0 area 0
+ network 10.0.0.70 0.0.0.0 area 0
+ network 10.0.0.81 0.0.0.0 area 0
+ network 10.3.0.2 0.0.0.0 area 0
+ network 10.4.0.2 0.0.0.0 area 0
+ network 10.5.0.2 0.0.0.0 area 0
+ network 10.0.0.18 0.0.0.0 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+access-list 1 permit 10.1.0.0 0.0.0.255
+!
+no cdp run
+!
+!
+!
+!
+snmp-server community SNMPSTRING RO
+!
+logging trap debugging
+logging 10.5.0.4
+line con 0
+ exec-timeout 30 0
+ logging synchronous
+ login local
+!
+line aux 0
+!
+line vty 0 4
+ access-class 1 in
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ access-class 1 in
+ logging synchronous
+ login local
+ transport input ssh
+!
+!
+!
+ntp authentication-key 1 md5 08224F4008 7
+ntp trusted-key 1
+ntp server 10.0.0.76 key 1
+!
+end
+

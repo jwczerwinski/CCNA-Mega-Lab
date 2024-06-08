@@ -1,0 +1,170 @@
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname ASW-B2
+!
+enable secret 5 $1$mERr$ZP9YB9WF.fNqXnHTiobwF/
+!
+!
+!
+ip ssh version 2
+ip domain-name jonsitlab.com
+ip name-server 10.5.0.4
+!
+username cisco secret 5 $1$mERr$Bok4KDfVutXOJolNq009M/
+!
+ip arp inspection vlan 10,20,30,99
+ip arp inspection validate src-mac dst-mac ip
+!
+ip dhcp snooping vlan 10,20,30,99
+no ip dhcp snooping information option
+ip dhcp snooping
+!
+lldp run
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport access vlan 10
+ ip dhcp snooping limit rate 15
+ no lldp transmit
+ switchport mode access
+ switchport nonegotiate
+ switchport voice vlan 20
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security mac-address sticky 
+ switchport port-security violation restrict 
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/2
+ shutdown
+!
+interface FastEthernet0/3
+ shutdown
+!
+interface FastEthernet0/4
+ shutdown
+!
+interface FastEthernet0/5
+ shutdown
+!
+interface FastEthernet0/6
+ shutdown
+!
+interface FastEthernet0/7
+ shutdown
+!
+interface FastEthernet0/8
+ shutdown
+!
+interface FastEthernet0/9
+ shutdown
+!
+interface FastEthernet0/10
+ shutdown
+!
+interface FastEthernet0/11
+ shutdown
+!
+interface FastEthernet0/12
+ shutdown
+!
+interface FastEthernet0/13
+ shutdown
+!
+interface FastEthernet0/14
+ shutdown
+!
+interface FastEthernet0/15
+ shutdown
+!
+interface FastEthernet0/16
+ shutdown
+!
+interface FastEthernet0/17
+ shutdown
+!
+interface FastEthernet0/18
+ shutdown
+!
+interface FastEthernet0/19
+ shutdown
+!
+interface FastEthernet0/20
+ shutdown
+!
+interface FastEthernet0/21
+ shutdown
+!
+interface FastEthernet0/22
+ shutdown
+!
+interface FastEthernet0/23
+ shutdown
+!
+interface FastEthernet0/24
+ shutdown
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,99
+ ip arp inspection trust
+ ip dhcp snooping trust
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/2
+ switchport trunk native vlan 1000
+ switchport trunk allowed vlan 10,20,30,99
+ ip arp inspection trust
+ ip dhcp snooping trust
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan99
+ ip address 10.0.0.21 255.255.255.240
+!
+ip default-gateway 10.0.0.17
+!
+no cdp run
+!
+logging trap debugging
+logging 10.5.0.4
+!
+!
+snmp-server community SNMPSTRING RO
+!
+access-list 1 permit 10.1.0.0 0.0.0.255
+line con 0
+ logging synchronous
+ login local
+ exec-timeout 30 0
+!
+line vty 0 4
+ access-class 1 in
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ access-class 1 in
+ logging synchronous
+ login local
+ transport input ssh
+!
+!
+!
+ntp trusted-key 1
+ntp server 10.0.0.76 key 1
+!
+end
+
