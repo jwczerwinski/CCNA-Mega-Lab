@@ -1,0 +1,40 @@
+#INFO ABOUT STEPS:
+#Step 1e - 'ipv6 enable' generates a link-local ipv6 address for an interface, allowing ipv6 traffic without specifying an ipv6 address.
+#Step 2b - This is the redundant backup connection to the internet. AD is 2 so that the primary ipv6 route is prefered.
+
+#R1 - EDGE ROUTER
+ipv6 unicast-routing
+int g0/0/0
+ipv6 add 2001:db8:a::2/64
+int g0/1/0
+ipv6 add 2001:db8:b::2/64
+int g0/0
+ipv6 add 2001:db8:a1::/64 eui-64
+int g0/1
+ipv6 add 2001:db8:a2::/64 eui-64
+exit
+ipv6 route ::/0 2001:db8:a::1
+ipv6 route ::/0 g0/1/0 2001:db8:b::1 2
+do write
+
+#CSW1
+ipv6 unicast-routing
+int g1/0/1
+ipv6 add 2001:db8:a1::/64 eui-64
+int po1
+ipv6 enable
+exit
+do write
+
+#CSW2
+ipv6 unicast-routing
+int g1/0/1
+ipv6 add 2001:db8:a2::/64 eui-64
+int po1
+ipv6 enable
+exit
+do write
+
+#VERIFY RESULTS (ROUTER & SWITCHES):
+show running-config
+show ipv6 int br
