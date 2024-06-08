@@ -15,6 +15,7 @@ ipv6 add 2001:db8:a2::/64 eui-64
 exit
 ipv6 route ::/0 2001:db8:a::1
 ipv6 route ::/0 g0/1/0 2001:db8:b::1 2
+exit
 do write
 
 #CSW1
