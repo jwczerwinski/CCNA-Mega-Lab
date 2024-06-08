@@ -224,7 +224,7 @@ Verify step 4: <br />
 
 Copy and paste commands from this configuration file into the command line of the devices:<br />
 
-[Part 8 – IPv6](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%207%20-%20Security%20-%20ACLs%20and%20Layer-2%20Security20Features.txt)<br />
+[Part 8 – IPv6](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%208%20%E2%80%93%20IPv6.txt)<br />
 Verify Results:<br />
 Verify steps 1a - 1e: <br />
 <img src="https://i.imgur.com/cEZfrQj.png" height="80%" width="80%" /> <br />
@@ -233,3 +233,13 @@ Verify steps 2a - 2b: <br />
 <img src="https://i.imgur.com/770dPye.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/rkrVuUH.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/thx38Dl.png" height="80%" width="80%" /> <br />
+
+<h1>Part 9 – Wireless</h1>
+<img src="https://i.imgur.com/f7PfNL4.png" height="80%" width="80%" /> <br />
+
+Copy and paste commands from this configuration file into the command line of the devices:<br />
+
+[Part 9 – Wireless](https://github.com/jwczerwinski/CCNA-Mega-Lab/blobmain/Pat%208%20%E2%80%93%20IPv6.txt)<br />
+Verify Results:<br />
+Verify steps 1a - 1b: <br />
+<img src="https://i.imgur.com/cEZfrQj.png" height="80%" width="80%" /> <br />
