@@ -53,7 +53,7 @@ default-router 10.2.0.1
 domain-name jonsitlab.com
 dns-server 10.5.0.4
 ip dhcp pool B-Mgmt
-network 10.17.0.0 255.255.255.240
+network 10.0.0.16 255.255.255.240
 default-router 10.0.0.17
 domain-name jonsitlab.com
 dns-server 10.5.0.4
