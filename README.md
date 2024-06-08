@@ -237,9 +237,14 @@ Verify steps 2a - 2b: <br />
 <h1>Part 9 – Wireless</h1>
 <img src="https://i.imgur.com/f7PfNL4.png" height="80%" width="80%" /> <br />
 
-Copy and paste commands from this configuration file into the command line of the devices:<br />
-
-[Part 9 – Wireless](https://github.com/jwczerwinski/CCNA-Mega-Lab/blobmain/Pat%208%20%E2%80%93%20IPv6.txt)<br />
+Follow the steps above. devices:<br />
 Verify Results:<br />
-Verify steps 1a - 1b: <br />
-<img src="https://i.imgur.com/cEZfrQj.png" height="80%" width="80%" /> <br />
+Verify steps 1 - 2: <br />
+<img src="https://i.imgur.com/XUdevAD.png" height="80%" width="80%" /> <br />
+Verify step 3: <br />
+<img src="https://i.imgur.com/XUdevAD.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/AFE313o.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/BCRLZzg.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/WPoy58T.png" height="80%" width="80%" /> <br />
+Verify step 4: <br />
+<img src="https://i.imgur.com/JdJXq4Z.png" height="80%" width="80%" /> <br />
