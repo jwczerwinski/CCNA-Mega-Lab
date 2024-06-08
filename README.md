@@ -202,3 +202,16 @@ Verify steps 12a - 12d: <br />
 <img src="https://i.imgur.com/RCjbpot.png" height="80%" width="80%" /> <br />
 Verify step 13: <br />
 <img src="https://i.imgur.com/uJuDBYp.png" height="80%" width="80%" /> <br />
+
+Copy and paste commands from this configuration file into command line of device:<br />
+
+[Part 7 – Security: ACLs and Layer-2 Security Features](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%0Etherchannel%2C%0HSRP.txt)<br />
+Verify Results:<br />
+Verify step 1: <br />
+<img src="https://i.imgur.com/sN1Yxqn.png" height="80%" width="80%" /> <br />
+Verify steps 2a - 2c: <br />
+<img src="https://i.imgur.com/yT0Nlk1.png" height="80%" width="80%" /> <br />
+Verify steps 3a - 3e: <br />
+<img src="https://i.imgur.com/S9XFMgH.png" height="80%" width="80%" /> <br />
+Verify step 4: <br />
+<img src="https://i.imgur.com/gmhzu9V.png" height="80%" width="80%" /> <br />
