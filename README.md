@@ -28,7 +28,7 @@ Comprehensive lab covers all configuration topics on the CCNA exam. This lab cov
 
 <h1>Part 1 - Initial Setup</h1>
 <img src="https://i.imgur.com/MvVbDhm.png" height="80%" width="80%" /> <br />
-Adjust hostnames in this configuration file for each router/swtich based on the layer in the network topology (edge, core, distrbution, access), then copy and paste commands from configuration file into command line of device:<br />
+Adjust hostnames in this configuration file for each router/swtich based on the layer in the network topology (edge, core, distrbution, access), then copy and paste commands from configuration file into the command line of the devices:<br />
 
 [Part 1 - Initial Setup](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%201%20-%20Initial%20Setup.txt)<br />
 Verify Results:<br />
@@ -49,7 +49,7 @@ Identify interfaces connecting networking devices - Use command 'show cdp neighb
 Identify interfaces connecting to endpoints - Use command 'show interfaces status'. <br />
 <img src="https://i.imgur.com/EbKSBuH.png" height="80%" width="80%" /> <br />
 
-Copy and paste commands from this configuration file into command line of device:<br />
+Copy and paste commands from this configuration file into the command line of the devices:<br />
 
 [Part 2 - VLANs, Layer-2 EtherChannel](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%202%20-%20VLANs%2C%20Layer-2%20EtherChannel.txt)<br />
 Verify Results:<br />
@@ -85,7 +85,7 @@ Verify step 9:<br />
 <img src="https://i.imgur.com/zUUUgUI.png" height="80%" width="80%" /> <br />
 
 Command 'show cdp neighbor' won't show interface connections between router and core switches until after step 1. See excel file downloaded at beginning of walk-through for interface connections and IP addressing scheme. <br />
-Copy and paste commands from this configuration file into command line of device:<br />
+Copy and paste commands from this configuration file into the command line of the devices:<br />
 
 
 [Part 3 - IP Addresses, Layer-3 Etherchannel, HSRP](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%20Etherchannel%2C%20HSRP.txt)<br />
@@ -121,7 +121,7 @@ Verify steps 12 - 19: <br />
 <img src="https://i.imgur.com/bgtj0qH.png" height="80%" width="80%" /> <br />
 
 #Step 2 - For ASW-A1 interface f0/2 connection with WLC1, use command 'spanning-tree portfast trunk' to enable portfast on the trunk connection.<br />
-Copy and paste commands from this configuration file into command line of device:<br />
+Copy and paste commands from this configuration file into the command line of the devices:<br />
 
 [Part 4 - Rapid Spanning Tree Protocol](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%204%20-%20Rapid%20Spanning%20Tree%20Protocol.txt)<br />
 Verify Results:<br />
@@ -135,7 +135,7 @@ Verify step 2: <br />
 <h1>Part 5 - Static and Dynamic Routing</h1>
 <img src="https://i.imgur.com/BSkE2oQ.png" height="80%" width="80%" /> <br />
 
-Copy and paste commands from this configuration file into command line of device:<br />
+Copy and paste commands from this configuration file into the command line of the devices:<br />
 
 [Part 5 - Static and Dynamic Routing](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%205%20-%20Static%20and%20Dynamic%20Routing.txt)<br />
 Verify Results:<br />
@@ -162,7 +162,7 @@ Verify steps 2a - 2b: <br />
 <img src="https://i.imgur.com/wtYawbk.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/ZrWKXd3.png" height="80%" width="80%" /> <br />
 
-Copy and paste commands from this configuration file into command line of device:<br />
+Copy and paste commands from this configuration file into the command line of the devices:<br />
 
 [Part 6 - Network Services: DHCP, DNS, NTP, SNMP, Syslog, FTP, SSH, NAT](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%20Etherchannel%2C%0HSRP.txt)<br />
 Verify Results:<br />
@@ -203,9 +203,12 @@ Verify steps 12a - 12d: <br />
 Verify step 13: <br />
 <img src="https://i.imgur.com/uJuDBYp.png" height="80%" width="80%" /> <br />
 
-Copy and paste commands from this configuration file into command line of device:<br />
+<h1>Part 7 – Security: ACLs and Layer-2 Security Features</h1>
+<img src="https://i.imgur.com/N3YGOzK.png" height="80%" width="80%" /> <br />
 
-[Part 7 – Security: ACLs and Layer-2 Security Features](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%203%20-%20IP%20Addresses%2C%20Layer-3%0Etherchannel%2C%0HSRP.txt)<br />
+Copy and paste commands from this configuration file into the command line of the devices:<br />
+
+[Part 7 – Security: ACLs and Layer-2 Security Features](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%207%20-%20Security%20-%20ACLs%20and%20Layer-2%20Security%20Features.txt)<br />
 Verify Results:<br />
 Verify step 1: <br />
 <img src="https://i.imgur.com/sN1Yxqn.png" height="80%" width="80%" /> <br />
@@ -215,3 +218,18 @@ Verify steps 3a - 3e: <br />
 <img src="https://i.imgur.com/S9XFMgH.png" height="80%" width="80%" /> <br />
 Verify step 4: <br />
 <img src="https://i.imgur.com/gmhzu9V.png" height="80%" width="80%" /> <br />
+
+<h1>Part 8 – IPv6</h1>
+<img src="https://i.imgur.com/MKIbjxV.png" height="80%" width="80%" /> <br />
+
+Copy and paste commands from this configuration file into the command line of the devices:<br />
+
+[Part 8 – IPv6](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/Part%207%20-%20Security%20-%20ACLs%20and%20Layer-2%20Security20Features.txt)<br />
+Verify Results:<br />
+Verify steps 1a - 1e: <br />
+<img src="https://i.imgur.com/cEZfrQj.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/5nLgIEs.png" height="80%" width="80%" /> <br />
+Verify steps 2a - 2b: <br />
+<img src="https://i.imgur.com/770dPye.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/rkrVuUH.png" height="80%" width="80%" /> <br />
+<img src="https://i.imgur.com/thx38Dl.png" height="80%" width="80%" /> <br />
