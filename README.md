@@ -249,3 +249,9 @@ Verify step 3: <br />
 Verify step 4: <br />
 <img src="https://i.imgur.com/JdJXq4Z.png" height="80%" width="80%" /> <br />
 <img src="https://i.imgur.com/pAEi4hj.png" height="80%" width="80%" /> <br />
+
+<h1>Complete</h1>
+
+[Complete Lab File Here](https://github.com/jwczerwinski/CCNA-Mega-Lab/blob/main/CCNA%20Mega%20Lab%20(Jeremy_s%20IT%20Lab)_Complete.pka)<br />
+<img src="https://i.imgur.com/XNTwD38.png" height="80%" width="80%" /> <br />
+
