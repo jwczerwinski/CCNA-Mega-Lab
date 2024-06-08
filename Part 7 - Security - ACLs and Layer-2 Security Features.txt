@@ -1,0 +1,139 @@
+#INFO ABOUT STEPS:
+#Step 1 - Extended ACLs should be applied as close to source, while Standard ACLs should be applied as close to destination.
+#Step 2 - Phone and PCs are 2 MAC addresses, LWAP is one MAC address, SRV1 is one MAC address (typical all VMs on a server have their own MAC address). 2c - 'mac-address sticky'
+
+#DSW-A*
+ip access-list extended OfficeA_to_OfficeB
+permit icmp 10.1.0.0 0.0.0.255 10.3.0.0 0.0.0.255
+deny ip 10.1.0.0 0.0.0.255 10.3.0.0 0.0.0.255
+permit ip any any
+int vlan 10
+ip access-group OfficeA_to_OfficeB in
+exit
+do write
+
+#ASW-A1
+interface f0/1
+switchport port-security
+switchport port-security violation restrict
+switchport port-security mac-address sticky
+ip dhcp snooping
+ip dhcp snooping vlan 10,20,40,99
+no ip dhcp snooping information option
+int range g0/1-2
+ip dhcp snooping trust
+int f0/1
+ip dhcp snooping limit rate 15
+int f0/2
+ip dhcp snooping limit rate 100
+ip arp inspection vlan 10,20,40,99
+ip arp inspection validate dst-mac src-mac ip
+int range g0/1-2
+ip arp inspection trust
+exit
+do write
+
+#ASW-A2
+interface f0/1
+switchport port-security
+switchport port-security maximum 2
+switchport port-security violation restrict
+switchport port-security mac-address sticky
+ip dhcp snooping
+ip dhcp snooping vlan 10,20,40,99
+no ip dhcp snooping information option
+int range g0/1-2
+ip dhcp snooping trust
+int f0/1
+ip dhcp snooping limit rate 15
+ip arp inspection vlan 10,20,40,99
+ip arp inspection validate dst-mac src-mac ip
+int range g0/1-2
+ip arp inspection trust
+exit
+do write
+
+ASW-A3
+interface f0/1
+switchport port-security
+switchport port-security maximum 2
+switchport port-security violation restrict
+switchport port-security mac-address sticky
+ip dhcp snooping
+ip dhcp snooping vlan 10,20,40,99
+no ip dhcp snooping information option
+int range g0/1-2
+ip dhcp snooping trust
+int f0/1
+ip dhcp snooping limit rate 15
+ip arp inspection vlan 10,20,40,99
+ip arp inspection validate dst-mac src-mac ip
+int range g0/1-2
+ip arp inspection trust
+exit
+do write
+
+ASW-B1
+interface f0/1
+switchport port-security
+switchport port-security violation restrict
+switchport port-security mac-address sticky
+ip dhcp snooping
+ip dhcp snooping vlan 10,20,30,99
+no ip dhcp snooping information option
+int range g0/1-2
+ip dhcp snooping trust
+int f0/1
+ip dhcp snooping limit rate 15
+ip arp inspection vlan 10,20,30,99
+ip arp inspection validate dst-mac src-mac ip
+int range g0/1-2
+ip arp inspection trust
+exit
+do write
+
+ASW-B2
+interface f0/1
+switchport port-security
+switchport port-security maximum 2
+switchport port-security violation restrict
+switchport port-security mac-address sticky
+ip dhcp snooping
+ip dhcp snooping vlan 10,20,30,99
+no ip dhcp snooping information option
+int range g0/1-2
+ip dhcp snooping trust
+int f0/1
+ip dhcp snooping limit rate 15
+ip arp inspection vlan 10,20,30,99
+ip arp inspection validate dst-mac src-mac ip
+int range g0/1-2
+ip arp inspection trust
+exit
+do write
+
+ASW-B3
+interface f0/1
+switchport port-security
+switchport port-security violation restrict
+switchport port-security mac-address sticky
+ip dhcp snooping
+ip dhcp snooping vlan 10,20,30,99
+no ip dhcp snooping information option
+int range g0/1-2
+ip dhcp snooping trust
+int f0/1
+ip dhcp snooping limit rate 15
+ip arp inspection vlan 10,20,30,99
+ip arp inspection validate dst-mac src-mac ip
+int range g0/1-2
+ip arp inspection trust
+exit
+do write
+
+#VERIFY RESULTS (ROUTER & SWITCHES):
+show running-config
+show access-lists
+show port-security interface f0/1
+show ip dhcp snooping
+show ip arp inspection
